@@ -1,1 +1,1 @@
-# MMSegmentControl
+使用UICollectionView实现类似于今日头条的segmentControl，欢迎讨论
