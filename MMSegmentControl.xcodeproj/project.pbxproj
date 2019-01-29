@@ -84,12 +84,12 @@
 		3A5DF14022003DFA00FEF652 /* MMSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
-				3A5DF14122003DFA00FEF652 /* MMSegmentView.h */,
-				3A5DF14222003DFA00FEF652 /* MMSegmentControl.m */,
-				3A5DF14322003DFA00FEF652 /* MMSegmentItem.h */,
-				3A5DF14422003DFA00FEF652 /* MMSegmentView.m */,
-				3A5DF14522003DFA00FEF652 /* MMSegmentItem.m */,
 				3A5DF14622003DFA00FEF652 /* MMSegmentControl.h */,
+				3A5DF14222003DFA00FEF652 /* MMSegmentControl.m */,
+				3A5DF14122003DFA00FEF652 /* MMSegmentView.h */,
+				3A5DF14422003DFA00FEF652 /* MMSegmentView.m */,
+				3A5DF14322003DFA00FEF652 /* MMSegmentItem.h */,
+				3A5DF14522003DFA00FEF652 /* MMSegmentItem.m */,
 			);
 			path = MMSegmentControl;
 			sourceTree = "<group>";
