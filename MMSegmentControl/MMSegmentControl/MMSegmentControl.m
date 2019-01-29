@@ -88,9 +88,6 @@
     [_collectionView reloadData];
     
     [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-    if([_segmentDelegate respondsToSelector:@selector(segmentControl:didSelectedIndex:)]){
-        [_segmentDelegate segmentControl:self didSelectedIndex:indexPath.item];
-    }
 }
 
 - (void)scrollToIndex:(NSInteger)index animated:(BOOL)animated{
@@ -111,6 +108,8 @@
 - (void)setItems:(NSArray *)items {
     [_rows addObjectsFromArray:items];
     [_collectionView reloadData];
+    
+    self.selectIndex = 0;
 }
 
 - (NSArray *)items {
@@ -222,7 +221,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self setSelectIndex:indexPath.item animated:YES];
+    [self setSelectIndex:indexPath.item animated:NO];
+    if([_segmentDelegate respondsToSelector:@selector(segmentControl:didSelectedIndex:)]){
+        [_segmentDelegate segmentControl:self didSelectedIndex:indexPath.item];
+    }
 }
 
 @end

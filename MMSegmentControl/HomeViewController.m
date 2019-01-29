@@ -53,8 +53,7 @@
     _pageViewController.view.frame = pageViewRect;
     [self.view addSubview:_pageViewController.view];
     
-//    [self setViewControllerAtIndex:0 animated:NO];
-    self.segmentControl.selectIndex = 0;
+    [self setViewControllerAtIndex:0 animated:NO];
 }
 
 - (void)segmentControl:(MMSegmentControl *)segmentControl didSelectedIndex:(NSInteger)index {
