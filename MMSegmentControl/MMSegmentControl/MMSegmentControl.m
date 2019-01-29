@@ -28,34 +28,46 @@
     return control;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self createUI];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self){
-        self.backgroundColor = [UIColor whiteColor];
-        _rows = [NSMutableArray array];
-        
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.minimumInteritemSpacing = 0;
-        flowLayout.minimumLineSpacing = 0;
-        _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
-        _collectionView.showsHorizontalScrollIndicator = NO;
-        _collectionView.showsVerticalScrollIndicator = NO;
-        _collectionView.dataSource = self;
-        _collectionView.delegate = self;
-        _collectionView.backgroundColor = [UIColor clearColor];
-        [self addSubview:_collectionView];
-        [_collectionView registerClass:[MMSegmentView class] forCellWithReuseIdentifier:@"MMSegmentCell"];
-        
-        _indicatorLine = [[UIView alloc]initWithFrame:CGRectZero];
-        _indicatorLine.backgroundColor = [UIColor redColor];
-        [_collectionView addSubview:_indicatorLine];
-        
-        _bottomLine = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - 0.6, CGRectGetWidth(self.bounds), 0.6)];
-        _bottomLine.backgroundColor = [UIColor grayColor];
-        [self addSubview:_bottomLine];
+        [self createUI];
     }
     return self;
+}
+
+- (void)createUI {
+    self.backgroundColor = [UIColor whiteColor];
+    _rows = [NSMutableArray array];
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.minimumLineSpacing = 0;
+    _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
+    _collectionView.showsHorizontalScrollIndicator = NO;
+    _collectionView.showsVerticalScrollIndicator = NO;
+    _collectionView.dataSource = self;
+    _collectionView.delegate = self;
+    _collectionView.backgroundColor = [UIColor clearColor];
+    [self addSubview:_collectionView];
+    [_collectionView registerClass:[MMSegmentView class] forCellWithReuseIdentifier:@"MMSegmentCell"];
+    
+    _indicatorLine = [[UIView alloc]initWithFrame:CGRectZero];
+    _indicatorLine.backgroundColor = [UIColor redColor];
+    [_collectionView addSubview:_indicatorLine];
+    
+    _bottomLine = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - 0.6, CGRectGetWidth(self.bounds), 0.6)];
+    _bottomLine.backgroundColor = [UIColor grayColor];
+    [self addSubview:_bottomLine];
 }
 
 #pragma mark --private methods

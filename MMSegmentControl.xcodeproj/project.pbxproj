@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3A5DF12C22003DDB00FEF652 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF12B22003DDB00FEF652 /* AppDelegate.m */; };
 		3A5DF12F22003DDB00FEF652 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF12E22003DDB00FEF652 /* ViewController.m */; };
-		3A5DF13222003DDB00FEF652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DF13022003DDB00FEF652 /* Main.storyboard */; };
 		3A5DF13422003DDD00FEF652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DF13322003DDD00FEF652 /* Assets.xcassets */; };
 		3A5DF13722003DDD00FEF652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5DF13522003DDD00FEF652 /* LaunchScreen.storyboard */; };
 		3A5DF13A22003DDD00FEF652 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF13922003DDD00FEF652 /* main.m */; };
 		3A5DF14722003DFA00FEF652 /* MMSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF14222003DFA00FEF652 /* MMSegmentControl.m */; };
 		3A5DF14822003DFA00FEF652 /* MMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF14422003DFA00FEF652 /* MMSegmentView.m */; };
 		3A5DF14922003DFA00FEF652 /* MMSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF14522003DFA00FEF652 /* MMSegmentItem.m */; };
+		3A5DF14C2200417100FEF652 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5DF14B2200417100FEF652 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		3A5DF12B22003DDB00FEF652 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A5DF12D22003DDB00FEF652 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3A5DF12E22003DDB00FEF652 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3A5DF13122003DDB00FEF652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A5DF13322003DDD00FEF652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A5DF13622003DDD00FEF652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5DF13822003DDD00FEF652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +34,8 @@
 		3A5DF14422003DFA00FEF652 /* MMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSegmentView.m; sourceTree = "<group>"; };
 		3A5DF14522003DFA00FEF652 /* MMSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSegmentItem.m; sourceTree = "<group>"; };
 		3A5DF14622003DFA00FEF652 /* MMSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSegmentControl.h; sourceTree = "<group>"; };
+		3A5DF14A2200417100FEF652 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3A5DF14B2200417100FEF652 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +73,8 @@
 				3A5DF12B22003DDB00FEF652 /* AppDelegate.m */,
 				3A5DF12D22003DDB00FEF652 /* ViewController.h */,
 				3A5DF12E22003DDB00FEF652 /* ViewController.m */,
-				3A5DF13022003DDB00FEF652 /* Main.storyboard */,
+				3A5DF14A2200417100FEF652 /* HomeViewController.h */,
+				3A5DF14B2200417100FEF652 /* HomeViewController.m */,
 				3A5DF13322003DDD00FEF652 /* Assets.xcassets */,
 				3A5DF13522003DDD00FEF652 /* LaunchScreen.storyboard */,
 				3A5DF13822003DDD00FEF652 /* Info.plist */,
@@ -153,7 +155,6 @@
 			files = (
 				3A5DF13722003DDD00FEF652 /* LaunchScreen.storyboard in Resources */,
 				3A5DF13422003DDD00FEF652 /* Assets.xcassets in Resources */,
-				3A5DF13222003DDB00FEF652 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +170,7 @@
 				3A5DF13A22003DDD00FEF652 /* main.m in Sources */,
 				3A5DF12C22003DDB00FEF652 /* AppDelegate.m in Sources */,
 				3A5DF14722003DFA00FEF652 /* MMSegmentControl.m in Sources */,
+				3A5DF14C2200417100FEF652 /* HomeViewController.m in Sources */,
 				3A5DF14822003DFA00FEF652 /* MMSegmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,14 +178,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A5DF13022003DDB00FEF652 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A5DF13122003DDB00FEF652 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A5DF13522003DDD00FEF652 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

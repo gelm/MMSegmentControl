@@ -7,45 +7,34 @@
 //
 
 #import "ViewController.h"
-#import "MMSegmentControl.h"
 
 @interface ViewController ()
-
-@property (nonatomic,strong) MMSegmentControl *segmentControl;
 
 @end
 
 @implementation ViewController
+@synthesize label = _label;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _label = [[UILabel alloc]init];
+        _label.textColor = [UIColor whiteColor];
+        _label.font = [UIFont systemFontOfSize:40];
+        _label.textAlignment = NSTextAlignmentCenter;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    [self.view addSubview:self.segmentControl];
-}
 
-#pragma mark --getter
-- (MMSegmentControl *)segmentControl {
-    if(!_segmentControl){
-        //数据源
-        NSMutableArray *array = [NSMutableArray array];
-        for(NSInteger i=0;i<10;i++){
-            MMSegmentItem *item = [[MMSegmentItem alloc]init];
-            item.title = [NSString stringWithFormat:@"测试%lu",i];
-            item.normalColor = [UIColor whiteColor];
-            item.selectedColor = [UIColor yellowColor];
-            [array addObject:item];
-        }
-        _segmentControl = [[MMSegmentControl alloc]initWithFrame:CGRectMake(0, 15, CGRectGetWidth(self.view.bounds), 30)];
-        _segmentControl.backgroundColor = [UIColor grayColor];
-        _segmentControl.items = array;
-        _segmentControl.itemSize = ^{
-            return CGSizeMake(60, 30);
-        };
-    }
-    return _segmentControl;
+    _label.frame = self.view.bounds;
+    [self.view addSubview:self.label];
 }
 
 @end

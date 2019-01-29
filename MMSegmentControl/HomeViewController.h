@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeViewController.h
 //  MMSegmentControl
 //
 //  Created by 各连明 on 2019/1/29.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, strong, readonly) UILabel *label;
+@interface HomeViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
